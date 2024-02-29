@@ -1,0 +1,72 @@
+<p>segundo-dia works!</p>
+
+
+
+
+<button
+class="btn btn-primary"
+(click)="clickButton('success')"
+>
+cambios
+</button>
+
+<div **ngIf="Variable === 'success'">
+<button> class="btn btn-dark:Variable>success </button>
+
+</div>
+<div>
+    <h3>boton utilizando ngclass</h3>
+    <button
+    class="btn"
+    [ngClass]="{'btn-success': Variable === 'success'}"
+    
+    >
+success
+
+    </button>
+
+</div>
+
+<div>
+
+
+
+</div>
+
+{{Variable}}
+<table class="table">
+<thead>
+<tr>
+    <table class="table">
+  <thead>
+
+<tr>
+    <th scope="col">Name</th>
+<th scope="col">descripcion</th>
+    
+</tr>
+
+  </thead>
+<tbody>
+<tr *ngFor="let user of users"  >
+<th scope="row">{{user.name}}</th>
+<td>{{user.description}}</td>
+
+</tr>
+
+
+</tbody>
+    </table>
+    <h1>INPUTS</h1>
+    <input type="text" class="form-control"[(ngModel)]="name")]>
+    <input type="text" class="form-control"[(ngModel)]="descripcion")]>
+    <p>{{name}}</p>
+    <p>{{descripcion}}</p>
+
+    <form [formGroup]="formulariouser">
+        <input type="text" class="form-control"formControlName="name")]>
+        <input type="text" class="form-control"formControlName="descripcion")]>
+        <p>{{name}}</p>
+        <p>{{descripcion}}</p>
+        <button button class="btn btn-primary"(click)="submitForm()"></button>
+    </form>
