@@ -11,10 +11,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './segundo-dia.component.css'
 })
 export class SegundoDiaComponent {
-submitForm() {
-throw new Error('Method not implemented.');
-}
   Variable = ''
+  btn_Class = "btn-btn-success"
   formulariouser:FormGroup = new FormGroup(
 {
  name: new FormControl (''),
@@ -42,22 +40,23 @@ name=''
 descripcion = ''
   
 constructor(){
-console.log("se ejecuto")
-
-}
-ngOnInit() {
+console.log("se ejecuto");
 
 }
 ngDoCheck(): void {
-  //Called every time that the input properties of a component or a directive are checked. Use it to extend change detection by performing a custom check.
-  //Add 'implements DoCheck' to the class.
+  console.log("se ejecuto el check");
   
 }
 clickButton(text:string){
 this.Variable=text
 
 }
-
+ngOnDestroy() {
+  console.log("se inicio el constructor");
+}
+submitForm(){
+  console.log(this.formulariouser.value)
+}
 
 }
 
